@@ -1,0 +1,5 @@
+TeleportedConfirmation: '&8[&7TAWP&8] &7Teleported %number% players.'
+TeleportedNotification: '&8[&7TAWP&8] &7You have been teleported!'
+ReloadedMessage: '&8[&7TAWP&8] &aConfiguration was reloaded!'
+NoPermissionMessage: '&8[&7TAWP&8] &cSorry, you don''t have permission to do that!'
+InvalidSyntaxMessage: '&8[&7TAWP&8] &cSorry, the syntax is /tawp <player>'

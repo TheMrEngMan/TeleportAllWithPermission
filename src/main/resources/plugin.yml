@@ -1,0 +1,17 @@
+name: TeleportAllWithPermission
+main: com.MrEngMan.TeleportAllWithPermission.Main
+author: MrEngMan
+description: Teleport all players having specified permission node
+api-version: '1.13'
+version: 1.0
+commands:
+  tawp:
+    usage: /tawp <player>
+    description: Teleport all players having specified permission node
+permissions:
+  tawp.tp:
+    default: op
+    description: Issue teleport command
+  tawp.me:
+    default: false
+    description: Be teleported by the command

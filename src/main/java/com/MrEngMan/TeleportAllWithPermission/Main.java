@@ -58,14 +58,16 @@ public class Main extends JavaPlugin implements Listener {
                     inputIsValid = false;
                 }
                 else {
-                    if (getServer().getPlayer(args[0]) == null){
-                        inputIsValid = false;
+                    if (!args[0].equalsIgnoreCase("me")){
+                        if(getServer().getPlayer(args[0]) == null) inputIsValid = false;
+                    } else {
+                        if (!(sender instanceof Player)) inputIsValid = false;
                     }
                 }
 
                 if(inputIsValid) {
 
-                    Location locationToTeleportTo = getServer().getPlayer(args[0]).getLocation();
+                    Location locationToTeleportTo = args[0].equalsIgnoreCase("me") ? ((Player) sender).getLocation() : getServer().getPlayer(args[0]).getLocation();
                     int numberOfTeleportedPlayers = 0;
                     for(Player player : getServer().getOnlinePlayers()) {
                         if(!player.hasPermission("tawp.me")) continue;
